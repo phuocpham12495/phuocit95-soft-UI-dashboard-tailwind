@@ -1,0 +1,100 @@
+<div>
+    <form wire:submit="load">
+        <label>Player Name</label>
+        <input type="text" placeholder="Default input"
+            class="mb-4 focus:shadow-soft-primary-outline text-sm leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none"
+            wire:model="playerName"></input>
+        @error('playerName')
+            <div><em>{{ $message }}</em></div>
+        @enderror
+        <button type="submit"
+            class="mb-4 inline-block px-6 py-3 font-bold text-center text-white uppercase align-middle transition-all rounded-lg cursor-pointer bg-gradient-to-tl from-purple-700 to-pink-500 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85 hover:shadow-soft-xs"
+            wire:loading.class="opacity-50" class="mt-4">Load</button>
+        <div wire:loading.block
+            class="mb-4 animate-spin w-10 h-10 border-[3px] border-current border-t-transparent text-blue-600 rounded-full"
+            role="status" aria-label="loading">
+        </div>
+        @if ($errorMsg)
+            <div wire:loading.remove>
+                <div class="mb-4 relative w-full p-4 text-white bg-red-500 rounded-lg">{{ $errorMsg }}</div>
+            </div>
+        @endif
+    </form>
+
+    <div wire:loading.remove class="flex flex-wrap -mx-3">
+        <div class="flex-none w-full max-w-full px-3">
+            <div
+                class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
+                <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
+                    <h6>Players table</h6>
+                </div>
+                <div class="flex-auto px-0 pt-0 pb-2">
+                    <div class="p-0 overflow-x-auto">
+                        <table class="items-center w-full mb-0 align-top border-gray-200 text-slate-500">
+                            <thead class="align-bottom">
+                                <tr>
+                                    <th
+                                        class="px-6 py-3 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                        Player</th>
+                                    <th
+                                        class="px-6 py-3 pl-2 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                        Photo</th>
+                                    <th
+                                        class="px-6 py-3 pl-2 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                        Complete Name</th>
+                                    <th
+                                        class="px-6 py-3 pl-2 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                        Position</th>
+                                    <th
+                                        class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                        Player Id</th>
+                                    {{-- <th
+                                        class="px-6 py-3 font-semibold capitalize align-middle bg-transparent border-b border-gray-200 border-solid shadow-none tracking-none whitespace-nowrap text-slate-400 opacity-70">
+                                    </th> --}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($players as $player)
+                                    <tr x-data = "{isLastItem : {{ $player == end($players) ? 'true' : 'false' }}}">
+                                        <td class="p-2 align-middle
+                                        bg-transparent whitespace-nowrap shadow-transparent"
+                                            x-bind:class="isLastItem ? 'border-b-0' : 'border-b'">
+                                            <span
+                                                class="bg-gradient-to-tl from-green-600 to-lime-400 px-2.5 text-xs rounded-1.8 py-1.4 whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">{{ $player['player_name'] }}</span>
+                                        </td>
+                                        </td>
+                                        <td class="p-2 align-middle bg-transparent whitespace-nowrap shadow-transparent"
+                                            x-bind:class="isLastItem ? 'border-b-0' : 'border-b'">
+                                            <div>
+                                                <img src="{{ $player['player_image'] }}"
+                                                    class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
+                                                    alt="NF"
+                                                    onerror="this.onerror=null; this.src='/assets/img/no-img.jpg';" />
+                                            </div>
+                                        </td>
+                                        <td class="p-2 align-middle bg-transparent whitespace-nowrap shadow-transparent"
+                                            x-bind:class="isLastItem ? 'border-b-0' : 'border-b'">
+                                            <p class="mb-0 text-xs leading-tight text-slate-400">
+                                                {{ $player['player_complete_name'] }}</p>
+                                        </td>
+                                        <td class="p-2 align-middle bg-transparent whitespace-nowrap shadow-transparent"
+                                            x-bind:class="isLastItem ? 'border-b-0' : 'border-b'">
+                                            <p class="mb-0 text-xs leading-tight text-slate-400">
+                                                {{ $player['player_type'] }}</p>
+
+                                        </td>
+                                        <td class="p-2 text-sm leading-normal text-center align-middle bg-transparent whitespace-nowrap shadow-transparent"
+                                            x-bind:class="isLastItem ? 'border-b-0' : 'border-b'">
+                                            <span
+                                                class="bg-gradient-to-tl from-green-600 to-lime-400 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">{{ $player['player_key'] }}</span>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
