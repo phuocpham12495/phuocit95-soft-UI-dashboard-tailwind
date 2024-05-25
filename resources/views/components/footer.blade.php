@@ -17,11 +17,11 @@
                             class="block px-4 pt-0 pb-1 font-normal transition-colors ease-soft-in-out text-sm text-slate-500"
                             target="_blank">Phuoc It 95</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="https://www.phuocit95.com/about"
                             class="block px-4 pt-0 pb-1 font-normal transition-colors ease-soft-in-out text-sm text-slate-500"
                             target="_blank">About Me</a>
-                    </li>
+                    </li> --}}
                     {{-- <li class="nav-item">
                         <a href="https://www.creative-tim.com/license"
                             class="block px-4 pt-0 pb-1 pr-0 font-normal transition-colors ease-soft-in-out text-sm text-slate-500"

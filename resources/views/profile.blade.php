@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout pageName="Profile">
     <x-side-nav pageName="Profile" />
     <div class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen bg-gray-50 transition-all duration-200">
         <x-nav-bar-profile />

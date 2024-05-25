@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot:pageName>Sign In</x-slot:pageName>
     <div class="container sticky top-0 z-sticky">
         <div class="flex flex-wrap -mx-3">
             <div class="w-full max-w-full px-3 flex-0">
