@@ -22,7 +22,7 @@
         <hr class="h-px mx-0 my-1 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
         <div class="flex-auto p-6 pt-0 sm:pt-4">
             <!-- Sidebar Backgrounds -->
-            <div>
+            {{-- <div>
                 <h6 class="mb-0">Sidebar Colors</h6>
             </div>
             <a href="javascript:void(0)">
@@ -47,7 +47,7 @@
                         class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-red-600 to-rose-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700"
                         data-color-from="red-600" data-color-to="rose-400" onclick="sidebarColor(this)"></span>
                 </div>
-            </a>
+            </a> --}}
             <!-- Sidenav Type -->
             <div class="mt-4">
                 <h6 class="mb-0">Sidenav Type</h6>
