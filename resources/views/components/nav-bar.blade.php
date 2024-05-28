@@ -1,7 +1,7 @@
 @props(['pageName' => ''])
 <!-- Navbar -->
 <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
-    navbar-main navbar-scroll="true">
+    navbar-main navbar-scroll="false">
     <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
         <nav>
             <!-- breadcrumb -->
@@ -40,15 +40,14 @@
                 @auth
                     <li class="flex items-center">
                         <div class="block px-0 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500">
-                            <i class="fa fa-user sm:mr-1"></i>
+                            <a href="/profile"><i class="fa fa-user sm:mr-1"></i></a>
                             <span class="hidden sm:inline">Hi, {{ Auth::user()->name }}</span>
                         </div>
                     </li>
                     <li class="flex items-center">
-                        <a href="/signout"
-                            class="block px-2 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500">
-                            <span class="hidden sm:inline">Sign Out</span>
-                        </a>
+                        <div class="block px-2 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500">
+                            <span class="hidden sm:inline"><a href="/signout">Sign Out</a></span>
+                        </div>
                     </li>
                 @endauth
                 <li class="flex items-center pl-4 xl:hidden">

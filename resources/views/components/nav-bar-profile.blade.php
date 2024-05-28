@@ -1,5 +1,5 @@
 <nav class="absolute z-20 flex flex-wrap items-center justify-between w-full px-6 py-2 text-white transition-all shadow-none duration-250 ease-soft-in lg:flex-nowrap lg:justify-start"
-    navbar-main navbar-scroll="true">
+    navbar-main navbar-scroll="false">
     <div class="flex items-center justify-between w-full px-6 py-1 mx-auto flex-wrap-inherit">
         <nav>
             <!-- breadcrumb -->

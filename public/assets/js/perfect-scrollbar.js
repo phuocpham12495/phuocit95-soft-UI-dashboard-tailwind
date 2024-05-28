@@ -13,7 +13,7 @@
             var i = 0;
             var ps;
             sidebar.forEach((element) => {
-                //ps[i++] = new PerfectScrollbar(element);
+                ps[i++] = new PerfectScrollbar(element);
             });
         }
         if (document.querySelectorAll(".overflow-y-auto")[0]) {
@@ -21,7 +21,7 @@
             var i = 0;
             var ps;
             sidebar.forEach((element) => {
-                //ps[i++] = new PerfectScrollbar(element);
+                ps[i++] = new PerfectScrollbar(element);
             });
         }
         if (document.querySelectorAll(".overflow-x-auto")[0]) {
@@ -29,7 +29,7 @@
             var i = 0;
             var ps;
             sidebar.forEach((element) => {
-                //ps[i++] = new PerfectScrollbar(element);
+                ps[i++] = new PerfectScrollbar(element);
             });
         }
     }

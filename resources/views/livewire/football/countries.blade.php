@@ -2,9 +2,8 @@
     <form wire:submit="load">
         <button wire:loading.class="opacity-50" type="submit"
             class="mb-4 inline-block px-6 py-3 font-bold text-center text-white uppercase align-middle transition-all rounded-lg cursor-pointer bg-gradient-to-tl from-purple-700 to-pink-500 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85 hover:shadow-soft-xs">Load</button>
-        <div wire:loading.block
-            class="mb-4 animate-spin w-10 h-10 border-[3px] border-current border-t-transparent text-blue-600 rounded-full"
-            role="status" aria-label="loading">
+        <div wire:loading.block class="mb-4" aria-label="loading">
+            <em>Loading...</em>
         </div>
         @if ($errorMsg)
             <div wire:loading.remove>
