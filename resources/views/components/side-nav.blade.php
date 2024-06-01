@@ -146,12 +146,14 @@
                         class="inline-block w-full px-8 py-2 mb-0 font-bold text-center text-black uppercase transition-all ease-in bg-white border-0 border-white rounded-lg shadow-soft-md bg-150 leading-pro text-xs hover:shadow-soft-2xl hover:scale-102">Documentation</a>
                 </div>
             </div>
+
         </div>
         <!-- pro btn  -->
         <a class="inline-block w-full px-6 py-3 my-4 font-bold text-center text-white uppercase align-middle transition-all ease-in border-0 rounded-lg select-none shadow-soft-md bg-150 bg-x-25 leading-pro text-xs bg-gradient-to-tl from-purple-700 to-pink-500 hover:shadow-soft-2xl hover:scale-102"
             target="_blank"
             href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-tailwind?ref=sidebarfree">Upgrade to
             pro</a> --}}
+
         <ul class="flex flex-col pl-0 mb-0">
             <li class="w-full mt-4">
                 <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">Account pages</h6>
@@ -218,6 +220,24 @@
                 </a>
             </li>
         </ul>
+
+        <div class="flex flex-col pl-0 mt-2 mb-6 items-center">
+            <a href="https://www.testdome.com/certificates/0d232c9d593a4793bd6950da045cda8c"
+                class="testdome-certificate-stamp silver">
+                <span class="testdome-certificate-name">Pham Huu Phuoc</span>
+                <span class="testdome-certificate-test-name">Laravel</span>
+                <span class="testdome-certificate-card-logo">TestDome<br>Certificate</span>
+            </a>
+            <script>
+                var stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css";
+                link = document.createElement("link");
+                link.href = stylesheet;
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                link.media = "screen,print";
+                document.getElementsByTagName("head")[0].appendChild(link);
+            </script>
+        </div>
     </div>
 </aside>
 <!-- end sidenav -->

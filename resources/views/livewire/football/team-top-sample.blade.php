@@ -5,13 +5,13 @@
                 <div class="flex-none w-3/4 max-w-full px-3">
                     <div>
                         <p class="mb-0 font-sans font-semibold leading-normal text-sm">
-                            Top 1 {{ $teamTop['league_name'] }}
+                            Top 1 {{ $teamTop['league_name'] }} 2023-2024
                         </p>
-                        <h5 class="mb-0 font-bold">
+                        <h6 class="mb-0 font-bold">
                             {{ $teamTop['team_name'] }}
                             <span
                                 class="leading-normal text-sm font-weight-bolder text-lime-500">{{ $teamTop['overall_league_PTS'] }}Pts</span>
-                        </h5>
+                        </h6>
                     </div>
                 </div>
                 <div class="px-3 text-right basis-1/4">

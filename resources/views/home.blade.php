@@ -4,9 +4,9 @@
     <!-- row 1 -->
     <div class="flex flex-wrap -mx-3">
         <!-- card1 -->
-        <livewire:football.team-top :leagueId="152" />
+        <livewire:football.team-top-sample :teamId="1" />
         <!-- card2 -->
-        <livewire:football.team-top :leagueId="152" />
+        <livewire:football.team-top-sample :teamId="2" />
     </div>
     <!-- row 2 -->
     <div class="flex flex-wrap mt-6 -mx-3">
@@ -47,11 +47,11 @@
     <!-- row 3 -->
     <div class="flex flex-wrap mt-6 -mx-3">
         <!-- card1 -->
-        <livewire:football.team-top :leagueId="152" />
+        <livewire:football.team-top-sample :teamId="3" />
         <!-- card2 -->
-        <livewire:football.team-top :leagueId="152" />
+        <livewire:football.team-top-sample :teamId="4" />
         <!-- card3 -->
-        <livewire:football.team-top :leagueId="152" />
+        <livewire:football.team-top-sample :teamId="5" />
     </div>
     <!-- end content -->
 </x-layout-page>

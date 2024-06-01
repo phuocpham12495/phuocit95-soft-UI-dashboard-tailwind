@@ -7,7 +7,7 @@
                     <script>
                         document.write(new Date().getFullYear());
                     </script>
-                    by Pham Huu Phuoc
+                    by Pham Huu Phuoc with Laravel + Livewire + TailwindCss + AlpineJs
                 </div>
             </div>
             <div class="w-full max-w-full px-3 mt-0 shrink-0 lg:w-1/2 lg:flex-none">
