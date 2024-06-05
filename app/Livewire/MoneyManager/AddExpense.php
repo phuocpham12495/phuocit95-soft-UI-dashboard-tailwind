@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\App1;
+namespace App\Livewire\MoneyManager;
 
 use Livewire\Component;
 use App\Models\CashFlow;
@@ -33,6 +33,6 @@ class AddExpense extends Component
 
     public function render()
     {
-        return view('livewire.app1.add-expense');
+        return view('livewire.money-manager.add-expense');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\App1;
+namespace App\Livewire\MoneyManager;
 
 use Livewire\Component;
 use App\Models\CashFlow;
@@ -16,6 +16,12 @@ class AddIncome extends Component
 
     #[Validate('required')]
     public $note;
+
+    public function mount() {
+        // $this->category = "";
+        // $this->amount = "";
+        // $this->note = "";
+    }
 
     public function add() {
         //validation
@@ -34,10 +40,12 @@ class AddIncome extends Component
         ]);
 
         $this->redirect("/app1");
+        // $this->dispatch('reRenderParent');
+        // $this->mount();
     }
 
     public function render()
     {
-        return view('livewire.app1.add-income');
+        return view('livewire.money-manager.add-income');
     }
 }

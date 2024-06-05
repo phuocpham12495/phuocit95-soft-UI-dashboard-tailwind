@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\LoginUserController;
-use App\Models\CashFlow;
 use App\Http\Controllers\CashFlowController;
 
 
@@ -19,7 +18,7 @@ Route::view("/players", "players")->middleware("auth");
 
 //App
 //App1
-Route::view("/app1", "app1", ["cashflows" => CashFlow::all()])->middleware("auth");
+Route::view("/app1", "app1")->middleware("auth");
 // Route::delete("/cashflow/{cashflow}", [CashFlowController::class, "destroy"])->middleware("auth")->can("delete", "cashflow");
 //App2
 Route::view("/app2", "app2")->middleware("auth");
