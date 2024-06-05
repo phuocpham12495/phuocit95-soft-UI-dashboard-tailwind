@@ -38,6 +38,67 @@
             </li>
 
             <li class="w-full mt-4">
+                <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">Other pages</h6>
+            </li>
+
+            <li class="mt-0.5 w-full">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+                    x-bind:class="pageName == 'App 1' ? 'shadow-soft-xl rounded-lg bg-white  font-semibold text-slate-700' :
+                        ''"
+                    href="/app1">
+                    <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
+                        x-bind:class="pageName == 'App 1' ? 'bg-gradient-to-tl from-purple-700 to-pink-500' : ''">
+                        <svg class="h-4 w-4 text-gray-900" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M12.971 3.54l6 3.333A2 2 0 0120 8.62v6.536a2 2 0 0 1 -1.029 1.748l-6 3.333a2 2 0 0 1 -1.942 0l-6-3.333A2 2 0 014 15.157V8.62a2 2 0 0 1 1.029 -1.748l6-3.333a2 2 0 0 1 1.942 0z" />
+                        </svg>
+                    </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">App 1</span>
+                </a>
+            </li>
+
+            <li class="mt-0.5 w-full">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+                    x-bind:class="pageName == 'App 2' ? 'shadow-soft-xl rounded-lg bg-white  font-semibold text-slate-700' :
+                        ''"
+                    href="/app2">
+                    <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
+                        x-bind:class="pageName == 'App 2' ? 'bg-gradient-to-tl from-purple-700 to-pink-500' : ''">
+                        <svg class="h-4 w-4 text-gray-900" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M12.971 3.54l6 3.333A2 2 0 0120 8.62v6.536a2 2 0 0 1 -1.029 1.748l-6 3.333a2 2 0 0 1 -1.942 0l-6-3.333A2 2 0 014 15.157V8.62a2 2 0 0 1 1.029 -1.748l6-3.333a2 2 0 0 1 1.942 0z" />
+                        </svg>
+                    </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">App 2</span>
+                </a>
+            </li>
+
+            <li class="mt-0.5 w-full">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+                    x-bind:class="pageName == 'App 3' ? 'shadow-soft-xl rounded-lg bg-white  font-semibold text-slate-700' :
+                        ''"
+                    href="/app3">
+                    <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
+                        x-bind:class="pageName == 'App 3' ? 'bg-gradient-to-tl from-purple-700 to-pink-500' : ''">
+                        <svg class="h-4 w-4 text-gray-900" width="24" height="24" viewBox="0 0 24 24"
+                            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M12.971 3.54l6 3.333A2 2 0 0120 8.62v6.536a2 2 0 0 1 -1.029 1.748l-6 3.333a2 2 0 0 1 -1.942 0l-6-3.333A2 2 0 014 15.157V8.62a2 2 0 0 1 1.029 -1.748l6-3.333a2 2 0 0 1 1.942 0z" />
+                        </svg>
+                    </div>
+                    <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">App 3</span>
+                </a>
+            </li>
+
+            <li class="w-full mt-4">
                 <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">Football pages</h6>
             </li>
 
@@ -114,46 +175,12 @@
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Players</span>
                 </a>
             </li>
-
-            <li class="w-full mt-4">
-                <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">Other pages</h6>
-            </li>
         </ul>
     </div>
 
     <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
 
     <div class="items-center block w-auto max-h-screen overflow-auto grow basis-full">
-        <!-- load phantom colors for card after: -->
-        {{-- <p
-            class="invisible hidden text-gray-800 text-red-500 text-red-600 after:bg-gradient-to-tl after:from-gray-900 after:to-slate-800 after:bg-gradient-to-tl after:from-blue-600 after:to-cyan-400 after:bg-gradient-to-tl after:from-red-500 after:to-yellow-400 after:bg-gradient-to-tl after:from-green-600 after:to-lime-400 after:bg-gradient-to-tl after:from-red-600 after:to-rose-400 after:bg-gradient-to-tl after:from-slate-600 after:to-slate-300 text-lime-500 text-cyan-500 text-slate-400 text-fuchsia-500">
-        </p>
-        <div class="after:opacity-65 after:bg-gradient-to-tl after:from-slate-600 after:to-slate-300 relative flex min-w-0 flex-col items-center break-words rounded-2xl border-0 border-solid border-blue-900 bg-white bg-clip-border shadow-none after:absolute after:top-0 after:bottom-0 after:left-0 after:z-10 after:block after:h-full after:w-full after:rounded-2xl after:content-['']"
-            sidenav-card>
-            <div class="mb-7.5 absolute h-full w-full rounded-2xl bg-cover bg-center"
-                style="background-image: url('../assets/img/curved-images/white-curved.jpeg')"></div>
-            <div class="relative z-20 flex-auto w-full p-4 text-left text-white">
-                <div
-                    class="flex items-center justify-center w-8 h-8 mb-4 text-center bg-white bg-center rounded-lg icon shadow-soft-2xl">
-                    <i class="top-0 z-10 text-transparent ni leading-none ni-diamond text-lg bg-gradient-to-tl from-slate-600 to-slate-300 bg-clip-text opacity-80"
-                        sidenav-card-icon></i>
-                </div>
-                <div class="transition-all duration-200 ease-nav-brand">
-                    <h6 class="mb-0 text-white">Need help?</h6>
-                    <p class="mt-0 mb-4 font-semibold leading-tight text-xs">Please check our docs</p>
-                    <a href="https://www.creative-tim.com/learning-lab/tailwind/html/quick-start/soft-ui-dashboard/"
-                        target="_blank"
-                        class="inline-block w-full px-8 py-2 mb-0 font-bold text-center text-black uppercase transition-all ease-in bg-white border-0 border-white rounded-lg shadow-soft-md bg-150 leading-pro text-xs hover:shadow-soft-2xl hover:scale-102">Documentation</a>
-                </div>
-            </div>
-
-        </div>
-        <!-- pro btn  -->
-        <a class="inline-block w-full px-6 py-3 my-4 font-bold text-center text-white uppercase align-middle transition-all ease-in border-0 rounded-lg select-none shadow-soft-md bg-150 bg-x-25 leading-pro text-xs bg-gradient-to-tl from-purple-700 to-pink-500 hover:shadow-soft-2xl hover:scale-102"
-            target="_blank"
-            href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-tailwind?ref=sidebarfree">Upgrade to
-            pro</a> --}}
-
         <ul class="flex flex-col pl-0 mb-0">
             <li class="w-full mt-4">
                 <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">Account pages</h6>

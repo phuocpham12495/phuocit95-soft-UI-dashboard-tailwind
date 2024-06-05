@@ -64,6 +64,18 @@
                                         </td>
                                     </tr>
                                 @endforeach
+                                @if (empty($countries))
+                                    <tr>
+                                        <td
+                                            class="border-b0 p-2 align-middle bg-transparent whitespace-nowrap shadow-transparent">
+                                            <div class="flex px-2 py-1">
+                                                <div class="flex flex-col justify-center">
+                                                    <h6 class="mb-0 leading-normal text-sm">No data</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endif
                             </tbody>
                         </table>
                     </div>

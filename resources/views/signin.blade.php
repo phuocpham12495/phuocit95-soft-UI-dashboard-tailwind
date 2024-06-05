@@ -34,13 +34,13 @@
                                             Home
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a class="block px-4 py-2 mr-2 font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-sm text-slate-700 lg:px-2"
                                             href="/profile">
                                             <i class="mr-1 fa fa-user opacity-60"></i>
                                             Profile
                                         </a>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a class="block px-4 py-2 mr-2 font-normal transition-all lg-max:opacity-0 duration-250 ease-soft-in-out text-sm text-slate-700 lg:px-2"
                                             href="/signup">
@@ -148,12 +148,12 @@
         <footer class="py-12">
             <div class="container">
                 <div class="flex flex-wrap -mx-3">
-                    <div class="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
+                    {{-- <div class="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
                         <a href="https://phuocit95.com/" target="_blank"
                             class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12">
                             Phuoc It 95
                         </a>
-                    </div>
+                    </div> --}}
                     {{-- <div class="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
                         <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
                             <span class="text-lg fab fa-dribbble"></span>
