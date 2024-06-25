@@ -11,7 +11,7 @@ use Barryvdh\Debugbar\Facades\Debugbar;
 
 class TeamTop extends Component
 {
-    #[Rule("required")]
+    #[Rule('required')]
     public $leagueId;
 
     public $teamTop;
@@ -62,24 +62,24 @@ class TeamTop extends Component
     public function load() {
         $this->validate();
 
-        $endpoint_url = "https://apiv3.apifootball.com";
+        $endpoint_url = 'https://apiv3.apifootball.com';
 
         try{
             $response = Http::timeout(10)->get($endpoint_url . '?APIkey=6438957d52f8604b47fe2d367eaa0f4fb69ed3aaeb6f8624a320386a7d178f46&action=get_standings&league_id=' . $this->leagueId);
             if ($response != null) {
-                Debugbar::info("Response status: " . $response->status());
+                Debugbar::info('Response status: ' . $response->status());
                 if($response->ok()) {
                     $teams = $response->json();
-                    Debugbar::info("teams: ");
+                    Debugbar::info('teams: ');
                     Debugbar::info($teams);
-                    if (isset($teams["error"])) {
+                    if (isset($teams['error'])) {
                         $this->teamTop = null;
-                        // $this->errorMsg = $teams["message"];
-                        $this->errorMsg = "No team is found";
+                        // $this->errorMsg = $teams['message'];
+                        $this->errorMsg = 'No team is found';
                     }
                     else {
                         $this->teamTop = $teams[0];
-                        $this->errorMsg = "";
+                        $this->errorMsg = '';
                     }
                 }
             }
@@ -89,7 +89,7 @@ class TeamTop extends Component
             }
         } catch (ConnectionException $e) {
             Debugbar::error('e: ' . $e);
-            $this->errorMsg = "Time out, retry it";
+            $this->errorMsg = 'Time out, retry it';
             // report($e);
         }
 
@@ -98,6 +98,6 @@ class TeamTop extends Component
 
     public function render()
     {
-        return view('livewire.football.team-top', ["teamTop" => $this->teamTop]);
+        return view('livewire.football.team-top', ['teamTop' => $this->teamTop]);
     }
 }

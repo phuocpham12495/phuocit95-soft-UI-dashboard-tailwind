@@ -17,10 +17,10 @@ class CashFlowFactory extends Factory
     public function definition(): array
     {
         return [
-            "category" => fake()->word(),
-            "amount" => fake()->randomDigit(),
-            "note" => fake()->text(),
-            "arise_date" => today()
+            'category' => fake()->word(),
+            'amount' => fake()->randomDigit(),
+            'note' => fake()->text(),
+            'arise_date' => today()
         ];
     }
 }

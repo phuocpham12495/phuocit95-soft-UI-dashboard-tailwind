@@ -18,9 +18,9 @@ class AddIncome extends Component
     public $note;
 
     public function mount() {
-        // $this->category = "";
-        // $this->amount = "";
-        // $this->note = "";
+        // $this->category = '';
+        // $this->amount = '';
+        // $this->note = '';
     }
 
     public function add() {
@@ -33,13 +33,13 @@ class AddIncome extends Component
         // ]);
 
         $cashflow = CashFlow::create([
-            "category" => $this->category,
-            "amount" => $this->amount,
-            "note" => $this->note,
-            "arise_date" => today()
+            'category' => $this->category,
+            'amount' => $this->amount,
+            'note' => $this->note,
+            'arise_date' => today()
         ]);
 
-        $this->redirect("/app1");
+        $this->redirect('/app1');
         // $this->dispatch('reRenderParent');
         // $this->mount();
     }

@@ -22,13 +22,13 @@ class AddExpense extends Component
         $this->validate();
 
         CashFlow::create([
-            "category" => $this->category,
-            "amount" => -$this->amount,
-            "note" => $this->note,
-            "arise_date" => today()
+            'category' => $this->category,
+            'amount' => -$this->amount,
+            'note' => $this->note,
+            'arise_date' => today()
         ]);
 
-        $this->redirect("/app1");
+        $this->redirect('/app1');
     }
 
     public function render()

@@ -9,20 +9,20 @@ use Illuminate\Validation\ValidationException;
 class LoginUserController extends Controller
 {
     public function create() {
-        return view("signin");
+        return view('signin');
     }
 
     public function store() {
         //validate
         $attributes = request()->validate([
-            "email" => ["required", "email"],
-            "password" => ["required"]
+            'email' => ['required', 'email'],
+            'password' => ['required']
         ]);
 
         //attempt to login the user
         if (!Auth::attempt($attributes)) {
             throw ValidationException::withMessages([
-                "signin" => "Sorry, those credentials do not match."
+                'signin' => 'Sorry, those credentials do not match.'
             ]);
         }
 
@@ -30,11 +30,11 @@ class LoginUserController extends Controller
         request()->session()->regenerate(); //prevent from Session Hijacking
 
         //redirect
-        return redirect("/dashboard");
+        return redirect('/dashboard');
     }
 
     public function destroy() {
         Auth::logout();
-        return redirect("/");
+        return redirect('/');
     }
 }

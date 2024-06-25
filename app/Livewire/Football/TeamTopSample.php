@@ -11,7 +11,7 @@ use Barryvdh\Debugbar\Facades\Debugbar;
 
 class TeamTopSample extends Component
 {
-    #[Rule("required")]
+    #[Rule('required')]
     public $teamId;
 
     public $teamTop;
@@ -54,7 +54,7 @@ class TeamTopSample extends Component
         ]', true);
 
         foreach($sampleTeamsTop as $sampleTeamTop) {
-            if ($sampleTeamTop["team_id"] == $this->teamId) {
+            if ($sampleTeamTop['team_id'] == $this->teamId) {
                 $this->teamTop = $sampleTeamTop;
                 break;
             }
@@ -63,6 +63,6 @@ class TeamTopSample extends Component
 
     public function render()
     {
-        return view('livewire.football.team-top-sample', ["teamTop" => $this->teamTop]);
+        return view('livewire.football.team-top-sample', ['teamTop' => $this->teamTop]);
     }
 }

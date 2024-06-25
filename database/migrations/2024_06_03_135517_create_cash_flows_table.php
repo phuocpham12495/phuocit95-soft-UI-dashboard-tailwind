@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('cash_flows', function (Blueprint $table) {
             $table->id();
-            $table->text("category");
-            $table->integer("amount");
+            $table->text('category');
+            $table->integer('amount');
             $table->string('note', length: 150);
-            $table->date("arise_date");
+            $table->date('arise_date');
             $table->timestamps();
         });
     }
